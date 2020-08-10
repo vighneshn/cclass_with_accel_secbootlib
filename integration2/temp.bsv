@@ -1,0 +1,2 @@
+interface Ifc_;
+endinterface
