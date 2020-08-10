@@ -1,0 +1,37 @@
+/******************************************************************************
+ * Department of Computer Science Engineering, IIT Madras
+ *
+ * bignumlib : A Scalable Multi-precision Library for Cryptographic Applications
+ * Version   : 1.0
+ *
+ * December 06, 2016
+ *
+ * Authors : Sravan Salaka, IIT Madras
+ *****************************************************************************/
+
+-- What this version contains --
+
+Multi-precision arithmetic for the following operations :
+addition, subtraction, multiplication (Montgomery multiplication),
+inversion, gcd, exponentiation, modular operations, shift 
+operations
+
+-- Configuration Information --
+types.h
+
+N_BITS        : Size of the multi-precision arithmetic to be done (in bits)
+WORD_SIZE     : Machine dependent word size (in bits)
+
+
+-- Assumptions --
+Currently supports Little Endian
+
+
+-- Compilation --
+To create an executable, run 
+$ make
+
+
+
+
+

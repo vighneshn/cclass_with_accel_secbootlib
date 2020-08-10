@@ -1,0 +1,316 @@
+Compiling mkTbSoc in verilog ...
+bsc -u -verilog -elab -vdir ./verilog/ -bdir ./bsv_build/ -info-dir ./bsv_build/\
+  -D RV64=True -D atomic=True -D spfpu=True -D dpfpu=True -D compressed=True -D muldiv=True -D simulate=True -D user=True -D rtldump=True -D supervisor=True -D sv39 -D ASSERT=True -D icache=True -D dcache=True -D bpu=True -D debug=True -D openocd=True -D ifence=True -D bpu_ras -D csr_low_latency=True -D perfmonitors=True -D csr_grp4=True -D csr_grp5=True -D csr_grp6=True -D csr_grp7=True -D counters_size=29 -D CORE_AXI4=True -D MULSTAGES=2 -D DIVSTAGES=32 -D counters_grp4=7 -D counters_grp5=7 -D counters_grp6=7 -D counters_grp7=8 -D Addr_space=25 -D iwords=4 -D iblocks=16 -D iways=4 -D isets=64 -D ifbsize=4 -D irepl=PLRU -D icachereset=1 -D iesize=2 -D idbanks=1 -D itbanks=1 -D ddbanks=1 -D dtbanks=1 -D dwords=8 -D dblocks=8 -D dways=4 -D dsets=64 -D dfbsize=8 -D drepl=PLRU -D dcachereset=1 -D desize=1 -D dsbsize=2 -D ibuswidth=64 -D paddr=32 -D vaddr=64 -D PMPSIZE=0 -D resetpc=16777216 -D asidwidth=9 -D  DTVEC_BASE=0000 -D btbdepth=32 -D bhtdepth=512 -D histlen=8 -D extrahist=3 -D rasdepth=8 -D bpureset=1 -D causesize=6 -D gshare=True -D itlbsize=4 -D dtlbsize=4 -D dtim_banks=1 -D itim_banks=1 -D dtimbase=1879048192 -D dtimbound=1879052288 -D itimbase=268435456 -D itimbound=268439552 +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined-vals  -remove-false-rules -remove-empty-rules -remove-starved-rules -remove-dollar -unspecified-to X  \
+  -p .:%/Prelude:%/Libraries:%/Libraries/BlueNoC:../src/core:../src/core/predictors:../src/core/m_ext:../src/core/fpu/:../src/core/m_ext/multiplier_designs:../src/core/csr:../src/core/csr/daisy_chain:../base-sim/fabrics/axi4:../base-sim/fabrics/axi4lite:../base-sim/caches_mmu/src/icache:../base-sim/caches_mmu/src/dcache:../base-sim/caches_mmu/src/tlbs:../base-sim/caches_mmu/src/:../base-sim/devices/bootrom:../base-sim/devices/pwm:../base-sim/devices/plic:../base-sim/devices/gpio:../base-sim/devices/uart:../base-sim/devices/clint:../base-sim/devices/bram:../base-sim/devices/aes:../base-sim/devices/rsa:../base-sim/devices/sha_256:../base-sim/devices/aes_buffer:../base-sim/devices/riscvDebug013:../base-sim/devices/jtagdtm/:../base-sim/devices/err_slave:../base-sim/devices/dma/bsv:../base-sim/common_bsv/:../base-sim/common_verilog/bsvwrappers/ -g mkTbSoc .//TbSoc.bsv  || (echo "BSC COMPILE ERROR"; exit 1)
+checking package dependencies
+compiling ../base-sim/devices/clint/clint.bsv
+compiling ../base-sim/devices/riscvDebug013/debug_types.bsv
+compiling ../base-sim/fabrics/axi4lite/AXI4_Lite_Fabric.bsv
+compiling ../base-sim/devices/bram/bram.bsv
+compiling ../base-sim/devices/bootrom/bootrom.bsv
+compiling ../base-sim/devices/gpio/gpio.bsv
+compiling ../src/core/globals.bsv
+compiling ../base-sim/caches_mmu/src//cache_types.bsv
+compiling ../base-sim/devices/err_slave/err_slave.bsv
+compiling ../base-sim/devices/riscvDebug013/debug_halt_loop.bsv
+compiling ./sign_dump.bsv
+code generation for mksign_dump starts
+Verilog file created: verilog//mksign_dump.v
+Elaborated module file created: ./bsv_build//mksign_dump.ba
+compiling ../base-sim/caches_mmu/src/tlbs/ptwalk_rv64.bsv
+code generation for mkinstance starts
+Verilog file created: verilog//mkinstance.v
+Elaborated module file created: ./bsv_build//mkinstance.ba
+compiling ../base-sim/common_bsv//ConcatReg.bsv
+compiling ../base-sim/devices/jtagdtm//jtagdtm.bsv
+code generation for mkjtagdtm starts
+Verilog file created: verilog//mkjtagdtm.v
+Elaborated module file created: ./bsv_build//mkjtagdtm.ba
+compiling ../base-sim/devices/riscvDebug013/riscvDebug013.bsv
+code generation for mkriscvDebug013 starts
+Verilog file created: verilog//mkriscvDebug013.v
+Elaborated module file created: ./bsv_build//mkriscvDebug013.ba
+compiling ../base-sim/devices/plic/encoder.bsv
+code generation for mkSencoder starts
+Verilog file created: verilog//mkSencoder.v
+Elaborated module file created: ./bsv_build//mkSencoder.ba
+compiling ../base-sim/devices/plic/plic.bsv
+compiling ../base-sim/devices/dma/bsv/DMA.bsv
+compiling ../base-sim/devices/uart/RS232_modified.bsv
+compiling ../base-sim/devices/uart/uart.bsv
+compiling ../base-sim/common_bsv//TxRx.bsv
+compiling ../base-sim/common_bsv//CustomFIFOs.bsv
+compiling ../src/core/stage4.bsv
+code generation for mkstage4 starts
+Verilog file created: verilog//mkstage4.v
+Elaborated module file created: ./bsv_build//mkstage4.ba
+compiling ./io_func.bsv
+compiling ../base-sim/caches_mmu/src/tlbs/fa_itlb.bsv
+code generation for mkfa_itlb starts
+Verilog file created: verilog//mkfa_itlb.v
+Elaborated module file created: ./bsv_build//mkfa_itlb.ba
+compiling ../base-sim/caches_mmu/src/tlbs/fa_dtlb.bsv
+code generation for mkfa_dtlb starts
+Verilog file created: verilog//mkfa_dtlb.v
+Elaborated module file created: ./bsv_build//mkfa_dtlb.ba
+compiling ../base-sim/devices/aes/rcon_gen.bsv
+code generation for mkRconRom starts
+Verilog file created: verilog//mkRconRom.v
+Elaborated module file created: ./bsv_build//mkRconRom.ba
+compiling ../base-sim/devices/sha_256/utils.bsv
+compiling ../base-sim/devices/sha_256/sequential_sha_engine.bsv
+code generation for mksequential_sha_engine starts
+Verilog file created: verilog//mksequential_sha_engine.v
+Elaborated module file created: ./bsv_build//mksequential_sha_engine.ba
+compiling ../base-sim/devices/sha_256/sha256.bsv
+compiling ../src/core/decompress.bsv
+code generation for module_fn_decompress starts
+Verilog file created: verilog//module_fn_decompress.v
+Elaborated module file created: ./bsv_build//module_fn_decompress.ba
+compiling ../src/core/stage1.bsv
+code generation for mkstage1 starts
+Verilog file created: verilog//mkstage1.v
+Elaborated module file created: ./bsv_build//mkstage1.ba
+compiling ../src/core/decoder.bsv
+code generation for module_address_valid starts
+Verilog file created: verilog//module_address_valid.v
+Elaborated module file created: ./bsv_build//module_address_valid.ba
+code generation for module_hasCSRPermission starts
+Verilog file created: verilog//module_hasCSRPermission.v
+Elaborated module file created: ./bsv_build//module_hasCSRPermission.ba
+code generation for module_valid_csr_access starts
+Verilog file created: verilog//module_valid_csr_access.v
+Elaborated module file created: ./bsv_build//module_valid_csr_access.ba
+code generation for module_chk_interrupt starts
+Verilog file created: verilog//module_chk_interrupt.v
+Elaborated module file created: ./bsv_build//module_chk_interrupt.ba
+code generation for module_decoder_func_32 starts
+Verilog file created: verilog//module_decoder_func_32.v
+Elaborated module file created: ./bsv_build//module_decoder_func_32.ba
+code generation for module_decode_word32 starts
+Verilog file created: verilog//module_decode_word32.v
+Elaborated module file created: ./bsv_build//module_decode_word32.ba
+compiling ../src/core/fwding.bsv
+code generation for mkfwding starts
+Verilog file created: verilog//mkfwding.v
+Elaborated module file created: ./bsv_build//mkfwding.ba
+compiling ../base-sim/caches_mmu/src/icache/replacement.bsv
+compiling ../base-sim/caches_mmu/src/dcache/replacement_dcache.bsv
+compiling ../base-sim/devices/aes/sbox.bsv
+compiling ../base-sim/devices/aes/KeyGen.bsv
+compiling ../base-sim/devices/aes/sbox_inv.bsv
+compiling ../base-sim/devices/aes/invMixCols.bsv
+compiling ../base-sim/devices/rsa/bigadd_updated.bsv
+compiling ../base-sim/devices/rsa/mmm_nomul.bsv
+compiling ../base-sim/devices/rsa/mme.bsv
+Foreign import file created: ./bsv_build//golden_result.ba
+VPI wrapper files created: ./verilog//vpi_wrapper_golden_result.{c,h}
+compiling ../base-sim/devices/rsa/mme_ui.bsv
+compiling ../src/core/registerfile.bsv
+code generation for mkregisterfile starts
+Verilog file created: verilog//mkregisterfile.v
+Elaborated module file created: ./bsv_build//mkregisterfile.ba
+compiling ../src/core/stage2.bsv
+code generation for mkstage2 starts
+Verilog file created: verilog//mkstage2.v
+Elaborated module file created: ./bsv_build//mkstage2.ba
+compiling ../base-sim/common_bsv//stack.bsv
+compiling ../src/core/predictors/gshare_fa.bsv
+code generation for mkbpu starts
+Verilog file created: verilog//mkbpu.v
+Elaborated module file created: ./bsv_build//mkbpu.ba
+compiling ../src/core/stage0.bsv
+code generation for mkstage0 starts
+Verilog file created: verilog//mkstage0.v
+Elaborated module file created: ./bsv_build//mkstage0.ba
+compiling ../base-sim/common_verilog/bsvwrappers//bram_1rw.bsv
+compiling ../base-sim/common_verilog/bsvwrappers//bram_1r1w.bsv
+compiling ../base-sim/caches_mmu/src//mem_config.bsv
+compiling ../base-sim/caches_mmu/src/icache/l1icache_vipt.bsv
+compiling ../base-sim/caches_mmu/src/icache/imem.bsv
+code generation for mkicache starts
+Verilog file created: verilog//mkicache.v
+Elaborated module file created: ./bsv_build//mkicache.ba
+code generation for mkitlb starts
+Verilog file created: verilog//mkitlb.v
+Elaborated module file created: ./bsv_build//mkitlb.ba
+code generation for mkimem starts
+Verilog file created: verilog//mkimem.v
+Elaborated module file created: ./bsv_build//mkimem.ba
+compiling ../base-sim/caches_mmu/src/dcache/l1dcache_vipt.bsv
+compiling ../base-sim/caches_mmu/src/dcache/dmem.bsv
+code generation for mkdcache starts
+Verilog file created: verilog//mkdcache.v
+Elaborated module file created: ./bsv_build//mkdcache.ba
+code generation for mkdmem starts
+Verilog file created: verilog//mkdmem.v
+Elaborated module file created: ./bsv_build//mkdmem.ba
+compiling ../base-sim/devices/aes/colByteMix.bsv
+compiling ../base-sim/devices/aes/col_shift.bsv
+compiling ../base-sim/devices/aes/gen_round.bsv
+compiling ../base-sim/devices/aes/aes.bsv
+compiling ../base-sim/devices/aes/aes_read_write_req2.bsv
+compiling ../src/core/m_ext/restoring_div.bsv
+code generation for mkrestoring_div starts
+Verilog file created: verilog//mkrestoring_div.v
+Elaborated module file created: ./bsv_build//mkrestoring_div.ba
+code generation for module_fn_single_div starts
+Verilog file created: verilog//module_fn_single_div.v
+Elaborated module file created: ./bsv_build//module_fn_single_div.ba
+compiling ../src/core/fpu//fpu_compare_min_max.bsv
+compiling ../src/core/fpu//fpu_sign_injection.bsv
+compiling ../src/core/fpu//fpu_sqrt.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_rcon_gen.bsv
+code generation for mkRconRom starts
+Verilog file created: verilog//mkRconRom.v
+Elaborated module file created: ./bsv_build//mkRconRom.ba
+compiling ../src/core/fpu//fpu_fclass.bsv
+compiling ../src/core/fpu//fpu_int_to_sp.bsv
+compiling ../src/core/fpu//fpu_sp_to_int.bsv
+compiling ../src/core/fpu//fpu_dp_to_int.bsv
+compiling ../src/core/fpu//fpu_int_to_dp.bsv
+compiling ../src/core/fpu//fpu_fm_add_sub.bsv
+compiling ../src/core/fpu//fpu_convert_sp_dp.bsv
+compiling ../src/core/csr/daisy_chain/csr_grp1.bsv
+code generation for mk_csr_grp1 starts
+Verilog file created: verilog//mk_csr_grp1.v
+Elaborated module file created: ./bsv_build//mk_csr_grp1.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp2.bsv
+code generation for mk_csr_grp2 starts
+Verilog file created: verilog//mk_csr_grp2.v
+Elaborated module file created: ./bsv_build//mk_csr_grp2.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp3.bsv
+code generation for mk_csr_grp3 starts
+Verilog file created: verilog//mk_csr_grp3.v
+Elaborated module file created: ./bsv_build//mk_csr_grp3.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp4.bsv
+code generation for mk_csr_grp4 starts
+Verilog file created: verilog//mk_csr_grp4.v
+Elaborated module file created: ./bsv_build//mk_csr_grp4.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp5.bsv
+code generation for mk_csr_grp5 starts
+Verilog file created: verilog//mk_csr_grp5.v
+Elaborated module file created: ./bsv_build//mk_csr_grp5.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp6.bsv
+code generation for mk_csr_grp6 starts
+Verilog file created: verilog//mk_csr_grp6.v
+Elaborated module file created: ./bsv_build//mk_csr_grp6.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_grp7.bsv
+code generation for mk_csr_grp7 starts
+Verilog file created: verilog//mk_csr_grp7.v
+Elaborated module file created: ./bsv_build//mk_csr_grp7.ba
+code generation for module_fn_csr_op starts
+Verilog file created: verilog//module_fn_csr_op.v
+Elaborated module file created: ./bsv_build//module_fn_csr_op.ba
+compiling ../src/core/csr/daisy_chain/csr_daisy.bsv
+code generation for mk_csr_daisy starts
+Verilog file created: verilog//mk_csr_daisy.v
+Elaborated module file created: ./bsv_build//mk_csr_daisy.ba
+compiling ../src/core/csr/csr.bsv
+code generation for mkcsr starts
+Verilog file created: verilog//mkcsr.v
+Elaborated module file created: ./bsv_build//mkcsr.ba
+compiling ../src/core/stage5.bsv
+code generation for mkstage5 starts
+Verilog file created: verilog//mkstage5.v
+Elaborated Verilog module file created: ./bsv_build//mkstage5.ba
+compiling ../base-sim/devices/aes_buffer/buffer_sbox.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_KeyGen.bsv
+compiling ../src/core/fpu//integer_divider.bsv
+compiling ../src/core/fpu//fpu_divider.bsv
+compiling ../src/core/fpu//fpu.bsv
+code generation for mkfpu starts
+Verilog file created: verilog//mkfpu.v
+Elaborated module file created: ./bsv_build//mkfpu.ba
+compiling ../base-sim/devices/aes_buffer/buffer_sbox_inv.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_invMixCols.bsv
+compiling ../base-sim/common_verilog/bsvwrappers//signedmul.bsv
+compiling ../src/core/m_ext/multiplier_designs/combo.bsv
+code generation for mkcombo_mul starts
+Verilog file created: verilog//mkcombo_mul.v
+Elaborated module file created: ./bsv_build//mkcombo_mul.ba
+compiling ../src/core/m_ext/mbox.bsv
+code generation for mkmbox starts
+Verilog file created: verilog//mkmbox.v
+Elaborated module file created: ./bsv_build//mkmbox.ba
+compiling ../src/core/alu.bsv
+code generation for mkmulticycle_alu starts
+Verilog file created: verilog//mkmulticycle_alu.v
+Elaborated module file created: ./bsv_build//mkmulticycle_alu.ba
+code generation for module_fn_alu starts
+Verilog file created: verilog//module_fn_alu.v
+Elaborated module file created: ./bsv_build//module_fn_alu.ba
+compiling ../src/core/stage3.bsv
+code generation for mkstage3 starts
+Verilog file created: verilog//mkstage3.v
+Elaborated module file created: ./bsv_build//mkstage3.ba
+compiling ../src/core/riscv.bsv
+code generation for mkriscv starts
+Verilog file created: verilog//mkriscv.v
+Elaborated module file created: ./bsv_build//mkriscv.ba
+compiling ../src/core/cclass.bsv
+code generation for mkcclass_axi4 starts
+Verilog file created: verilog//mkcclass_axi4.v
+Elaborated Verilog module file created: ./bsv_build//mkcclass_axi4.ba
+compiling ../base-sim/devices/aes_buffer/buffer_colByteMix.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_col_shift.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_gen_round.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_aes.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_aes_block_cipher.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_aes_bramfifo.bsv
+compiling ../base-sim/devices/aes_buffer/buffer_aes_read_write_req.bsv
+compiling ./Soc.bsv
+code generation for mkSoc starts
+Verilog file created: verilog//mkSoc.v
+Elaborated module file created: ./bsv_build//mkSoc.ba
+compiling .//TbSoc.bsv
+Foreign import file created: ./bsv_build//init_rbb_jtag.ba
+Foreign import file created: ./bsv_build//get_frame.ba
+Foreign import file created: ./bsv_build//send_tdo.ba
+VPI wrapper files created: ./verilog//vpi_wrapper_init_rbb_jtag.{c,h}
+VPI wrapper files created: ./verilog//vpi_wrapper_get_frame.{c,h}
+VPI wrapper files created: ./verilog//vpi_wrapper_send_tdo.{c,h}
+code generation for mkTbSoc starts
+Verilog file created: verilog//mkTbSoc.v
+Elaborated module file created: ./bsv_build//mkTbSoc.ba
+All packages are up to date.
+Compilation finished
+Linking mkTbSoc using verilator
+verilator -DVERBOSE -O3 -LDFLAGS "-static" --x-assign fast --x-initial fast --noassert sim_main.cpp --bbox-sys -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH -Wno-lint -Wno-COMBDLY -Wno-INITIALDLY --autoflush   --threads 1 -DBSV_RESET_FIFO_HEAD -DBSV_RESET_FIFO_ARRAY --output-split 20000 --output-split-ctrace 10000 --cc mkTbSoc.v -y ./verilog/ -y common_verilog --exe
+make OPT_SLOW="-O3" OPT_FAST="-O3" VM_PARALLEL_BUILDS=1 -j8 -C obj_dir -f VmkTbSoc.mk
+make[1]: Entering directory '/inner_space/vighnesh/aes/integration2/c-class/base-sim/obj_dir'
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o sim_main.o sim_main.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc.o VmkTbSoc.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__1.o VmkTbSoc__1.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__2.o VmkTbSoc__2.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__3.o VmkTbSoc__3.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__4.o VmkTbSoc__4.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__5.o VmkTbSoc__5.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__6.o VmkTbSoc__6.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__Slow.o VmkTbSoc__Slow.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__1__Slow.o VmkTbSoc__1__Slow.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__2__Slow.o VmkTbSoc__2__Slow.cpp
+g++-5  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -DVL_THREADED -std=gnu++14 -O3 -c -o VmkTbSoc__Syms.o VmkTbSoc__Syms.cpp
+      Archiving VmkTbSoc__ALL.a ...
+ar r VmkTbSoc__ALL.a VmkTbSoc.o VmkTbSoc__1.o VmkTbSoc__2.o VmkTbSoc__3.o VmkTbSoc__4.o VmkTbSoc__5.o VmkTbSoc__6.o VmkTbSoc__Slow.o VmkTbSoc__1__Slow.o VmkTbSoc__2__Slow.o VmkTbSoc__Syms.o
+ranlib VmkTbSoc__ALL.a
+g++-5    sim_main.o verilated.o VmkTbSoc__ALL.a   -static  -pthread -lpthread -latomic -o VmkTbSoc -lm -lstdc++ 
+make[1]: Leaving directory '/inner_space/vighnesh/aes/integration2/c-class/base-sim/obj_dir'

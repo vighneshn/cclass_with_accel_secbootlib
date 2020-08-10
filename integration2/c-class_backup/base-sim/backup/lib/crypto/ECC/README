@@ -1,0 +1,38 @@
+/******************************************************************************
+ * Department of Computer Science Engineering, IIT Madras
+ *
+ * bignumlib : A Scalable Multi-precision Library for Cryptographic Applications
+ * Version   : 1.0
+ *
+ * June 5, 2017
+ *
+ * Authors : Keerthi K
+ *****************************************************************************/
+
+-- What this version contains --
+
+Multi-precision arithmetic for the following operations :
+	addition, subtraction, Montgomery multiplication,multiplication (Karatsuba Multiplication)-including two varients of karatsuba
+	jacobian point addition,point doubling,jacobian-affine point addition,NAF generator,repeated doubling
+	algorithm and left-to-right scalar multiplication algorithm.
+
+
+-- Configuration Information --
+types.h
+
+N_BITS        : Size of the multi-precision arithmetic to be done (in bits)
+WORD_SIZE     : Machine dependent word size (in bits)
+
+
+-- Assumptions --
+Currently supports Little Endian
+
+
+-- Compilation --
+To create an executable using Karatsuba algorithm
+$ gcc main.c sc_left2right.c bignum.c ecc_lib.c 192red_16.c mul_subkara.c
+
+
+
+
+
