@@ -243,12 +243,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__data0_reg[1U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__data0_reg[2U] 
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__data0_reg[2U];
-    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[0U] 
-        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[0U];
-    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[1U] 
-        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[1U];
-    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[2U] 
-        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[2U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_data__DOT__data0_reg[0U] 
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_data__DOT__data0_reg[0U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_data__DOT__data0_reg[1U] 
@@ -285,6 +279,12 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__bram_s_xactor_f_rd_data__DOT__data0_reg[1U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__bram_s_xactor_f_rd_data__DOT__data0_reg[2U] 
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__bram_s_xactor_f_rd_data__DOT__data0_reg[2U];
+    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[0U] 
+        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[0U];
+    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[1U] 
+        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[1U];
+    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[2U] 
+        = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__data0_reg[2U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_rd_data__DOT__data0_reg[0U] 
         = vlTOPp->__Vdly__mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_rd_data__DOT__data0_reg[0U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_rd_data__DOT__data0_reg[1U] 
@@ -2396,7 +2396,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__bootrom_rg_readburst_counter) 
            == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__bootrom_rg_read_packet 
                                 >> 6U))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__write_strobe___05Fh1256904 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__write_strobe___05Fh1256931 
         = ((4U & ((IData)(1U) << (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_tsize)))
             ? ((2U & ((IData)(1U) << (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_tsize)))
                 ? ((1U & ((IData)(1U) << (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_tsize)))
@@ -2590,20 +2590,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         vlTOPp->mkTbSoc__DOT__soc__DOT__err_slave_s_xactor_f_rd_data__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
-        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request) 
-             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp_DEQ)))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg 
-                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__empty_reg)));
-        } else {
-            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp_DEQ) 
-                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request)))) {
-                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg = 1U;
-            }
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg = 1U;
-    }
-    if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aes_capture_read_request) 
              & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data_DEQ)))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__full_reg 
@@ -2616,20 +2602,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__full_reg = 1U;
-    }
-    if (vlTOPp->RST_N) {
-        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
-             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_DEQ)))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg 
-                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__empty_reg)));
-        } else {
-            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_DEQ) 
-                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)))) {
-                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg = 1U;
-            }
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__err_slave_s_xactor_f_wr_addr_ENQ) 
@@ -2663,6 +2635,20 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__result_fifo__DOT__full_reg = 1U;
+    }
+    if (vlTOPp->RST_N) {
+        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp_DEQ)))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg 
+                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__empty_reg)));
+        } else {
+            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp_DEQ) 
+                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request)))) {
+                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg = 1U;
+            }
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_output_fifo_ENQ) 
@@ -2974,6 +2960,20 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__bram_s_xactor_f_rd_data__DOT__full_reg = 1U;
+    }
+    if (vlTOPp->RST_N) {
+        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_DEQ)))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg 
+                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__empty_reg)));
+        } else {
+            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_DEQ) 
+                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)))) {
+                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg = 1U;
+            }
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_resp_ENQ) 
@@ -3585,20 +3585,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_12_f_rd_data__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
-        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_ENQ) 
-             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_DEQ)))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg 
-                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__empty_reg)));
-        } else {
-            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_DEQ) 
-                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_ENQ)))) {
-                vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg = 1U;
-            }
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg = 1U;
-    }
-    if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_9_f_rd_data_ENQ) 
              & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_9_f_rd_data_DEQ)))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_9_f_rd_data__DOT__full_reg 
@@ -3681,6 +3667,20 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_0_f_rd_data__DOT__full_reg = 1U;
+    }
+    if (vlTOPp->RST_N) {
+        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_ENQ) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_DEQ)))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg 
+                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__empty_reg)));
+        } else {
+            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_DEQ) 
+                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data_ENQ)))) {
+                vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg = 1U;
+            }
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_data__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_capture_write_request) 
@@ -4278,20 +4278,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_addr__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
-        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ) 
-             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg 
-                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__empty_reg)));
-        } else {
-            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
-                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ)))) {
-                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg = 1U;
-            }
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg = 1U;
-    }
-    if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__bootrom_s_xactor_f_rd_addr_ENQ) 
              & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_bootrom_read_request_first)))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__bootrom_s_xactor_f_rd_addr__DOT__full_reg 
@@ -4360,6 +4346,20 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__bram_s_xactor_f_rd_addr__DOT__full_reg = 1U;
+    }
+    if (vlTOPp->RST_N) {
+        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg 
+                = (1U & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__empty_reg)));
+        } else {
+            if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
+                 & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ)))) {
+                vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg = 1U;
+            }
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg = 1U;
     }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_rd_addr_ENQ) 
@@ -4827,7 +4827,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
                                              >> 0x14U)))) 
                     & (0x213ffU >= (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_from_masters_3_f_rd_addr__DOT__data0_reg 
                                             >> 0x14U)))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237908 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237935 
         = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_2) 
             << 8U) | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_1) 
                        << 4U) | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_0)));
@@ -7223,16 +7223,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__9(VmkTbSoc__Syms* __restrict vlSymsp
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusy = 0U;
     }
-    if (vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__derived_reset_RST_OUT) {
-        if (vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError_EN) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError 
-                = ((1U == (3U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sync_request_to_dm__DOT__syncFIFO1Data))) 
-                   | (0x38U != (0x7fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sync_request_to_dm__DOT__syncFIFO1Data 
-                                                 >> 0x22U)))));
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError = 0U;
-    }
 }
 
 VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSymsp) {
@@ -7245,6 +7235,16 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     WData/*95:0*/ __Vtemp2136[3];
     IData/*31:0*/ __Vilp;
     // Body
+    if (vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__derived_reset_RST_OUT) {
+        if (vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError_EN) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError 
+                = ((1U == (3U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sync_request_to_dm__DOT__syncFIFO1Data))) 
+                   | (0x38U != (0x7fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sync_request_to_dm__DOT__syncFIFO1Data 
+                                                 >> 0x22U)))));
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__debug_module__DOT__sbBusyError = 0U;
+    }
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_from_masters_2_f_wr_addr_ENQ) 
              & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_from_masters_2_f_wr_addr_DEQ)))) {
@@ -8874,7 +8874,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
             __Vilp = 0U;
             while ((__Vilp <= 0x3fU)) {
                 vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_mmeMod_n[__Vilp] 
-                    = vlTOPp->mkTbSoc__DOT__soc__DOT__n1___05Fh967978[__Vilp];
+                    = vlTOPp->mkTbSoc__DOT__soc__DOT__n1___05Fh968005[__Vilp];
                 __Vilp = ((IData)(1U) + __Vilp);
             }
         }
@@ -9018,7 +9018,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
              & (0x1dU == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                            >> 0x17U)))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ifcr_0 
-                = (0xfU & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322));
+                = (0xfU & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349));
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ifcr_0 = 0U;
@@ -9028,13 +9028,13 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
              & (0x1dU == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                            >> 0x17U)))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ifcr_1 
-                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322 
+                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349 
                                    >> 4U)));
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ifcr_1 = 0U;
     }
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237816 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237843 
         = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_isr_2) 
             << 8U) | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_isr_1) 
                        << 4U) | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_isr_0)));
@@ -9043,7 +9043,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
              & (0x1dU == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                            >> 0x17U)))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ifcr_2 
-                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322 
+                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349 
                                    >> 8U)));
         }
     } else {
@@ -9610,16 +9610,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
         vlTOPp->mkTbSoc__DOT__soc__DOT__plic_plic_rg_completion_id = 0U;
     }
     if (vlTOPp->RST_N) {
-        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
-             & (0x80U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                           >> 0x14U)))))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index 
-                = vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index_D_IN;
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index = 0U;
-    }
-    if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aes_aes_aes___05Fwrite_1___05FPSEL_1) 
              & (0xaU == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aes_aes_aes___05Fcounter)))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aes_aes_aes___05Fciphertext[0U] 
@@ -9638,11 +9628,21 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
         vlTOPp->mkTbSoc__DOT__soc__DOT__aes_aes_aes___05Fciphertext[3U] = 0U;
     }
     if (vlTOPp->RST_N) {
+        if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
+             & (0x80U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                           >> 0x14U)))))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index 
+                = vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index_D_IN;
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index = 0U;
+    }
+    if (vlTOPp->RST_N) {
         if (vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_rsa_user_ifc_rl_start) {
             __Vilp = 0U;
             while ((__Vilp <= 0x3fU)) {
                 vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_mmeMod_a[__Vilp] 
-                    = vlTOPp->mkTbSoc__DOT__soc__DOT__a1___05Fh967976[__Vilp];
+                    = vlTOPp->mkTbSoc__DOT__soc__DOT__a1___05Fh968003[__Vilp];
                 __Vilp = ((IData)(1U) + __Vilp);
             }
         }
@@ -9663,14 +9663,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                 = (0xffffU & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_handle_circ_mode)
                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_cndtr_0)
                                : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_startRead)
-                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_0_read___05F2747_3226_ETC___05F_d73230)
-                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_0_read___05F2747_3226_ETC___05F_d73230)
+                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_0_read___05F2749_3228_ETC___05F_d73232)
+                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_0_read___05F2749_3228_ETC___05F_d73232)
                                    : (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
                                        & (1U == (0x1fU 
                                                  & (IData)(
                                                            (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                                             >> 0x17U)))))
-                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                                        : 0U))));
         }
     } else {
@@ -9686,14 +9686,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                 = (0xffffU & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_handle_circ_mode_1)
                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_cndtr_1)
                                : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_startRead_1)
-                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_1_read___05F2782_3388_ETC___05F_d73392)
-                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_1_read___05F2782_3388_ETC___05F_d73392)
+                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_1_read___05F2784_3390_ETC___05F_d73394)
+                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_1_read___05F2784_3390_ETC___05F_d73394)
                                    : (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
                                        & (5U == (0x1fU 
                                                  & (IData)(
                                                            (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                                             >> 0x17U)))))
-                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                                        : 0U))));
         }
     } else {
@@ -9709,14 +9709,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                 = (0xffffU & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_handle_circ_mode_2)
                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_cndtr_2)
                                : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_startRead_2)
-                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_2_read___05F2817_3504_ETC___05F_d73508)
-                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_2_read___05F2817_3504_ETC___05F_d73508)
+                                   ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_2_read___05F2819_3506_ETC___05F_d73510)
+                                       ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT___0b0_CONCAT_dma_dma_dma_cndtr_2_read___05F2819_3506_ETC___05F_d73510)
                                    : (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
                                        & (9U == (0x1fU 
                                                  & (IData)(
                                                            (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                                             >> 0x17U)))))
-                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                                       ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                                        : 0U))));
         }
     } else {
@@ -9977,13 +9977,13 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     if (vlTOPp->RST_N) {
         if (vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_aesbuf_aes_aes_b_get_aes) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rCache[0U] 
-                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[0U];
+                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[0U];
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rCache[1U] 
-                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[1U];
+                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[1U];
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rCache[2U] 
-                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[2U];
+                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[2U];
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rCache[3U] 
-                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[3U];
+                = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[3U];
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rCache[4U] 
                 = (0x40U | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rWrPtr));
         }
@@ -10186,13 +10186,13 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73105)) 
+              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73107)) 
              | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_send_chan_disabled_to_proc) 
                 & (0U == (3U & vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[2U]))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_0 
                 = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73105))
-                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73107))
+                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                     : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[0U]);
         }
     } else {
@@ -10200,13 +10200,13 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73108)) 
+              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73110)) 
              | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_send_chan_disabled_to_proc) 
                 & (1U == (3U & vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[2U]))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_1 
                 = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73108))
-                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73110))
+                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                     : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[0U]);
         }
     } else {
@@ -10214,13 +10214,13 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73109)) 
+              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73111)) 
              | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_dma_dma_rl_send_chan_disabled_to_proc) 
                 & (2U == (3U & vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[2U]))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_2 
                 = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_dma_dma_writeConfig) 
-                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2963_3031_OR_d_ETC___05F_d73109))
-                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322)
+                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_dma_dma_wr_write_prot_wget___05F2965_3033_OR_d_ETC___05F_d73111))
+                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349)
                     : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_rg_writeConfig_ccr[0U]);
         }
     } else {
@@ -11961,395 +11961,11 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fdecrypt = 0U;
     }
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1008233 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1008260 
         = ((0xffffff00U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_last_col_sub_rot) 
            | (0xffU & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_sbox_out) 
                        ^ vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rcon)));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1010042 
-        = ((0x800000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-            ? ((0x400000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                ? ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x16U : 0xbbU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x54U : 0xb0U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xfU : 0x2dU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x99U : 0x41U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x68U : 0x42U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xe6U : 0xbfU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xdU : 0x89U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa1U : 0x8cU))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xdfU : 0x28U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x55U : 0xceU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xe9U : 0x87U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x1eU : 0x9bU)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x94U : 0x8eU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd9U : 0x69U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x11U : 0x98U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xf8U : 0xe1U)))))
-                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x9eU : 0x1dU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc1U : 0x86U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xb9U : 0x57U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x35U : 0x61U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xeU : 0xf6U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 3U : 0x48U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x66U : 0xb5U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x3eU : 0x70U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x8aU : 0x8bU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xbdU : 0x4bU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x1fU : 0x74U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xddU : 0xe8U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc6U : 0xb4U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa6U : 0x1cU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x2eU : 0x25U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x78U : 0xbaU))))))
-                : ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 8U : 0xaeU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x7aU : 0x65U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xeaU : 0xf4U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x56U : 0x6cU)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa9U : 0x4eU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd5U : 0x8dU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x6dU : 0x37U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc8U : 0xe7U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x79U : 0xe4U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x95U : 0x91U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x62U : 0xacU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd3U : 0xc2U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x5cU : 0x24U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 6U : 0x49U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xaU : 0x3aU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x32U : 0xe0U)))))
-                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xdbU : 0xbU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x5eU : 0xdeU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x14U : 0xb8U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xeeU : 0x46U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x88U : 0x90U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x2aU : 0x22U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xdcU : 0x4fU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x81U : 0x60U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x73U : 0x19U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x5dU : 0x64U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x3dU : 0x7eU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa7U : 0xc4U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x17U : 0x44U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x97U : 0x5fU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xecU : 0x13U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xcU : 0xcdU)))))))
-            : ((0x400000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                ? ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd2U : 0xf3U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xffU : 0x10U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x21U : 0xdaU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xb6U : 0xbcU)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xf5U : 0x38U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x9dU : 0x92U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x8fU : 0x40U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa3U : 0x51U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa8U : 0x9fU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x3cU : 0x50U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x7fU : 2U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xf9U : 0x45U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x85U : 0x33U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x4dU : 0x43U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xfbU : 0xaaU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xefU : 0xd0U)))))
-                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xcfU : 0x58U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x4cU : 0x4aU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x39U : 0xbeU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xcbU : 0x6aU)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x5bU : 0xb1U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xfcU : 0x20U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xedU : 0U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd1U : 0x53U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x84U : 0x2fU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xe3U : 0x29U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xb3U : 0xd6U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x3bU : 0x52U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa0U : 0x5aU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x6eU : 0x1bU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x1aU : 0x2cU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x83U : 9U))))))
-                : ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x75U : 0xb2U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x27U : 0xebU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xe2U : 0x80U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x12U : 7U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x9aU : 5U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x96U : 0x18U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc3U : 0x23U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc7U : 4U))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x15U : 0x31U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd8U : 0x71U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xf1U : 0xe5U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa5U : 0x34U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xccU : 0xf7U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x3fU : 0x36U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x26U : 0x93U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xfdU : 0xb7U)))))
-                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc0U : 0x72U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xa4U : 0x9cU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xafU : 0xa2U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd4U : 0xadU)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xf0U : 0x47U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x59U : 0xfaU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x7dU : 0xc9U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x82U : 0xcaU))))
-                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x76U : 0xabU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xd7U : 0xfeU))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x2bU : 0x67U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 1U : 0x30U)))
-                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0xc5U : 0x6fU)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x6bU : 0xf2U))
-                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x7bU : 0x77U)
-                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
-                                        ? 0x7cU : 0x63U))))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1011504 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1011531 
         = ((0x8000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
             ? ((0x4000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
                 ? ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
@@ -12733,7 +12349,391 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                                         ? 0x7bU : 0x77U)
                                     : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
                                         ? 0x7cU : 0x63U))))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1012968 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1010069 
+        = ((0x800000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+            ? ((0x400000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                ? ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x16U : 0xbbU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x54U : 0xb0U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xfU : 0x2dU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x99U : 0x41U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x68U : 0x42U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xe6U : 0xbfU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xdU : 0x89U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa1U : 0x8cU))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xdfU : 0x28U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x55U : 0xceU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xe9U : 0x87U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x1eU : 0x9bU)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x94U : 0x8eU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd9U : 0x69U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x11U : 0x98U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xf8U : 0xe1U)))))
+                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x9eU : 0x1dU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc1U : 0x86U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xb9U : 0x57U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x35U : 0x61U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xeU : 0xf6U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 3U : 0x48U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x66U : 0xb5U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x3eU : 0x70U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x8aU : 0x8bU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xbdU : 0x4bU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x1fU : 0x74U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xddU : 0xe8U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc6U : 0xb4U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa6U : 0x1cU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x2eU : 0x25U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x78U : 0xbaU))))))
+                : ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 8U : 0xaeU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x7aU : 0x65U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xeaU : 0xf4U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x56U : 0x6cU)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa9U : 0x4eU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd5U : 0x8dU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x6dU : 0x37U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc8U : 0xe7U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x79U : 0xe4U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x95U : 0x91U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x62U : 0xacU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd3U : 0xc2U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x5cU : 0x24U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 6U : 0x49U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xaU : 0x3aU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x32U : 0xe0U)))))
+                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xdbU : 0xbU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x5eU : 0xdeU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x14U : 0xb8U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xeeU : 0x46U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x88U : 0x90U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x2aU : 0x22U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xdcU : 0x4fU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x81U : 0x60U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x73U : 0x19U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x5dU : 0x64U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x3dU : 0x7eU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa7U : 0xc4U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x17U : 0x44U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x97U : 0x5fU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xecU : 0x13U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xcU : 0xcdU)))))))
+            : ((0x400000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                ? ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd2U : 0xf3U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xffU : 0x10U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x21U : 0xdaU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xb6U : 0xbcU)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xf5U : 0x38U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x9dU : 0x92U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x8fU : 0x40U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa3U : 0x51U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa8U : 0x9fU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x3cU : 0x50U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x7fU : 2U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xf9U : 0x45U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x85U : 0x33U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x4dU : 0x43U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xfbU : 0xaaU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xefU : 0xd0U)))))
+                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xcfU : 0x58U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x4cU : 0x4aU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x39U : 0xbeU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xcbU : 0x6aU)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x5bU : 0xb1U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xfcU : 0x20U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xedU : 0U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd1U : 0x53U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x84U : 0x2fU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xe3U : 0x29U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xb3U : 0xd6U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x3bU : 0x52U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa0U : 0x5aU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x6eU : 0x1bU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x1aU : 0x2cU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x83U : 9U))))))
+                : ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                    ? ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x75U : 0xb2U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x27U : 0xebU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xe2U : 0x80U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x12U : 7U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x9aU : 5U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x96U : 0x18U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc3U : 0x23U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc7U : 4U))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x15U : 0x31U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd8U : 0x71U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xf1U : 0xe5U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa5U : 0x34U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xccU : 0xf7U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x3fU : 0x36U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x26U : 0x93U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xfdU : 0xb7U)))))
+                    : ((0x100000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                        ? ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc0U : 0x72U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xa4U : 0x9cU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xafU : 0xa2U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd4U : 0xadU)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xf0U : 0x47U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x59U : 0xfaU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x7dU : 0xc9U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x82U : 0xcaU))))
+                        : ((0x80000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                            ? ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x76U : 0xabU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xd7U : 0xfeU))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x2bU : 0x67U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 1U : 0x30U)))
+                            : ((0x40000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                ? ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0xc5U : 0x6fU)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x6bU : 0xf2U))
+                                : ((0x20000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                    ? ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x7bU : 0x77U)
+                                    : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
+                                        ? 0x7cU : 0x63U))))))));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1012995 
         = ((0x80U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
             ? ((0x40U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
                 ? ((0x20U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_aes256_subcol4)
@@ -13537,14 +13537,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68554) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68561)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68556) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68563)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key6_write_1___05FSEL_3))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key6 
                 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0_write_1___05FSEL_1)
-                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key6___05Fh1014542
+                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key6___05Fh1014569
                     : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key6_write_1___05FSEL_2)
                         ? vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key_[1U]
                         : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key6_write_1___05FSEL_3)
@@ -13556,14 +13556,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68539) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68546)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68541) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68548)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key4_write_1___05FSEL_3))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key4 
                 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0_write_1___05FSEL_1)
-                    ? vlTOPp->mkTbSoc__DOT__soc__DOT___theResult___05F___05Fh1014540
+                    ? vlTOPp->mkTbSoc__DOT__soc__DOT___theResult___05F___05Fh1014567
                     : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key4_write_1___05FSEL_2)
                         ? ((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))
                             ? vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key_[1U]
@@ -13579,14 +13579,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68385) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68392)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68387) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68394)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_2))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key2 
                 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0_write_1___05FSEL_1)
-                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key2___05Fh1014537
+                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key2___05Fh1014564
                     : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_1)
                         ? ((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))
                             ? vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key_[1U]
@@ -13606,14 +13606,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68385) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68392)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68387) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68394)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_2))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key1 
                 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0_write_1___05FSEL_1)
-                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key1___05Fh1014536
+                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key1___05Fh1014563
                     : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_1)
                         ? ((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))
                             ? vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key_[2U]
@@ -13633,10 +13633,10 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47220)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47222)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68385) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68392)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68387) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68394)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_2))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number 
                 = vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_D_IN;
@@ -13646,14 +13646,14 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     }
     if (vlTOPp->RST_N) {
         if (((((3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
-               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)) 
+               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)) 
               | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_ae_ETC___05F_d68385) 
-                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68392)))) 
+                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_ae_ETC___05F_d68387) 
+                    | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68394)))) 
              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_2))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0 
                 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0_write_1___05FSEL_1)
-                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key0___05Fh1014535
+                    ? vlTOPp->mkTbSoc__DOT__soc__DOT__key0___05Fh1014562
                     : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_maxrounds_write_1___05FSEL_1)
                         ? ((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))
                             ? vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key_[3U]
@@ -13671,391 +13671,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_prev_key0 = 0x20U;
     }
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1005359 
-        = ((0x8000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-            ? ((0x4000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                ? ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x16U : 0xbbU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x54U : 0xb0U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xfU : 0x2dU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x99U : 0x41U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x68U : 0x42U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xe6U : 0xbfU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xdU : 0x89U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa1U : 0x8cU))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xdfU : 0x28U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x55U : 0xceU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xe9U : 0x87U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x1eU : 0x9bU)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x94U : 0x8eU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd9U : 0x69U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x11U : 0x98U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xf8U : 0xe1U)))))
-                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x9eU : 0x1dU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc1U : 0x86U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xb9U : 0x57U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x35U : 0x61U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xeU : 0xf6U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 3U : 0x48U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x66U : 0xb5U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x3eU : 0x70U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x8aU : 0x8bU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xbdU : 0x4bU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x1fU : 0x74U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xddU : 0xe8U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc6U : 0xb4U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa6U : 0x1cU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x2eU : 0x25U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x78U : 0xbaU))))))
-                : ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 8U : 0xaeU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x7aU : 0x65U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xeaU : 0xf4U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x56U : 0x6cU)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa9U : 0x4eU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd5U : 0x8dU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x6dU : 0x37U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc8U : 0xe7U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x79U : 0xe4U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x95U : 0x91U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x62U : 0xacU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd3U : 0xc2U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x5cU : 0x24U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 6U : 0x49U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xaU : 0x3aU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x32U : 0xe0U)))))
-                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xdbU : 0xbU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x5eU : 0xdeU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x14U : 0xb8U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xeeU : 0x46U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x88U : 0x90U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x2aU : 0x22U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xdcU : 0x4fU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x81U : 0x60U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x73U : 0x19U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x5dU : 0x64U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x3dU : 0x7eU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa7U : 0xc4U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x17U : 0x44U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x97U : 0x5fU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xecU : 0x13U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xcU : 0xcdU)))))))
-            : ((0x4000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                ? ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd2U : 0xf3U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xffU : 0x10U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x21U : 0xdaU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xb6U : 0xbcU)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xf5U : 0x38U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x9dU : 0x92U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x8fU : 0x40U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa3U : 0x51U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa8U : 0x9fU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x3cU : 0x50U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x7fU : 2U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xf9U : 0x45U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x85U : 0x33U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x4dU : 0x43U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xfbU : 0xaaU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xefU : 0xd0U)))))
-                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xcfU : 0x58U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x4cU : 0x4aU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x39U : 0xbeU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xcbU : 0x6aU)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x5bU : 0xb1U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xfcU : 0x20U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xedU : 0U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd1U : 0x53U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x84U : 0x2fU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xe3U : 0x29U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xb3U : 0xd6U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x3bU : 0x52U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa0U : 0x5aU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x6eU : 0x1bU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x1aU : 0x2cU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x83U : 9U))))))
-                : ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x75U : 0xb2U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x27U : 0xebU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xe2U : 0x80U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x12U : 7U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x9aU : 5U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x96U : 0x18U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc3U : 0x23U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc7U : 4U))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x15U : 0x31U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd8U : 0x71U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xf1U : 0xe5U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa5U : 0x34U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xccU : 0xf7U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x3fU : 0x36U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x26U : 0x93U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xfdU : 0xb7U)))))
-                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc0U : 0x72U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xa4U : 0x9cU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xafU : 0xa2U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd4U : 0xadU)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xf0U : 0x47U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x59U : 0xfaU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x7dU : 0xc9U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x82U : 0xcaU))))
-                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x76U : 0xabU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xd7U : 0xfeU))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x2bU : 0x67U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 1U : 0x30U)))
-                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0xc5U : 0x6fU)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x6bU : 0xf2U))
-                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x7bU : 0x77U)
-                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
-                                        ? 0x7cU : 0x63U))))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1003875 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1003902 
         = ((0x800000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
             ? ((0x400000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
                 ? ((0x200000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
@@ -14439,7 +14055,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                                         ? 0x7bU : 0x77U)
                                     : ((0x10000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
                                         ? 0x7cU : 0x63U))))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1006844 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1006871 
         = ((0x80U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
             ? ((0x40U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
                 ? ((0x20U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
@@ -14822,5 +14438,389 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__10(VmkTbSoc__Syms* __restrict vlSyms
                                     ? ((1U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
                                         ? 0x7bU : 0x77U)
                                     : ((1U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x7cU : 0x63U))))))));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1005386 
+        = ((0x8000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+            ? ((0x4000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                ? ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x16U : 0xbbU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x54U : 0xb0U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xfU : 0x2dU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x99U : 0x41U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x68U : 0x42U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xe6U : 0xbfU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xdU : 0x89U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa1U : 0x8cU))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xdfU : 0x28U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x55U : 0xceU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xe9U : 0x87U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x1eU : 0x9bU)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x94U : 0x8eU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd9U : 0x69U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x11U : 0x98U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xf8U : 0xe1U)))))
+                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x9eU : 0x1dU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc1U : 0x86U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xb9U : 0x57U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x35U : 0x61U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xeU : 0xf6U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 3U : 0x48U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x66U : 0xb5U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x3eU : 0x70U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x8aU : 0x8bU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xbdU : 0x4bU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x1fU : 0x74U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xddU : 0xe8U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc6U : 0xb4U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa6U : 0x1cU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x2eU : 0x25U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x78U : 0xbaU))))))
+                : ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 8U : 0xaeU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x7aU : 0x65U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xeaU : 0xf4U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x56U : 0x6cU)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa9U : 0x4eU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd5U : 0x8dU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x6dU : 0x37U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc8U : 0xe7U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x79U : 0xe4U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x95U : 0x91U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x62U : 0xacU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd3U : 0xc2U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x5cU : 0x24U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 6U : 0x49U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xaU : 0x3aU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x32U : 0xe0U)))))
+                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xdbU : 0xbU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x5eU : 0xdeU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x14U : 0xb8U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xeeU : 0x46U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x88U : 0x90U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x2aU : 0x22U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xdcU : 0x4fU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x81U : 0x60U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x73U : 0x19U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x5dU : 0x64U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x3dU : 0x7eU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa7U : 0xc4U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x17U : 0x44U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x97U : 0x5fU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xecU : 0x13U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xcU : 0xcdU)))))))
+            : ((0x4000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                ? ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd2U : 0xf3U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xffU : 0x10U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x21U : 0xdaU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xb6U : 0xbcU)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xf5U : 0x38U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x9dU : 0x92U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x8fU : 0x40U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa3U : 0x51U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa8U : 0x9fU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x3cU : 0x50U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x7fU : 2U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xf9U : 0x45U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x85U : 0x33U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x4dU : 0x43U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xfbU : 0xaaU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xefU : 0xd0U)))))
+                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xcfU : 0x58U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x4cU : 0x4aU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x39U : 0xbeU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xcbU : 0x6aU)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x5bU : 0xb1U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xfcU : 0x20U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xedU : 0U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd1U : 0x53U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x84U : 0x2fU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xe3U : 0x29U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xb3U : 0xd6U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x3bU : 0x52U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa0U : 0x5aU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x6eU : 0x1bU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x1aU : 0x2cU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x83U : 9U))))))
+                : ((0x2000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                    ? ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x75U : 0xb2U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x27U : 0xebU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xe2U : 0x80U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x12U : 7U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x9aU : 5U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x96U : 0x18U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc3U : 0x23U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc7U : 4U))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x15U : 0x31U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd8U : 0x71U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xf1U : 0xe5U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa5U : 0x34U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xccU : 0xf7U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x3fU : 0x36U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x26U : 0x93U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xfdU : 0xb7U)))))
+                    : ((0x1000U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                        ? ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc0U : 0x72U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xa4U : 0x9cU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xafU : 0xa2U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd4U : 0xadU)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xf0U : 0x47U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x59U : 0xfaU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x7dU : 0xc9U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x82U : 0xcaU))))
+                        : ((0x800U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                            ? ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x76U : 0xabU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xd7U : 0xfeU))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x2bU : 0x67U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 1U : 0x30U)))
+                            : ((0x400U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                ? ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0xc5U : 0x6fU)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x6bU : 0xf2U))
+                                : ((0x200U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                    ? ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
+                                        ? 0x7bU : 0x77U)
+                                    : ((0x100U & vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rot_prev_key)
                                         ? 0x7cU : 0x63U))))))));
 }

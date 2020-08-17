@@ -63,7 +63,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__6(VmkTbSoc__Syms* __restrict vlSymsp
              & (0x1eU == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                            >> 0x17U)))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_1 
-                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322 
+                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349 
                                    >> 4U)));
         }
     } else {
@@ -400,7 +400,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__6(VmkTbSoc__Syms* __restrict vlSymsp
              & (0x1eU == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                            >> 0x17U)))))) {
             vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_2 
-                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239322 
+                = (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__data___05Fh1239349 
                                    >> 8U)));
         }
     } else {

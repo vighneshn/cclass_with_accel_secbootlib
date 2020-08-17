@@ -23,16 +23,25 @@ typedef struct key_entry{
 key_entry *const pk_store=(key_entry*)PK_STORE_ADDR;
 //key_entry *const pk_store;
 //void digest_message(const uint8_t *message, int message_len, uint8_t *digest)
-void digest_message(void *message, int message_len, void *digest)
+void digest_message(void *message, int message_len, void *digest, int debug_flag)
 {
+    uint8_t* ptr = message;
+    //printf("MSG: %d\n", message_len>>3);
+    //if(debug_flag==1)
+    //  for(int i=0; i<message_len; i++){
+    //      printf("%02x", *(ptr+i));
+    //  }
+    //printf("\nMSG2: %d\n", message_len);
   #ifdef SHADRIVER
-    compute_hash((void*)message, (void*)digest, message_len);
+    compute_hash((void*)message, (void*)digest, message_len<<3, debug_flag);
   #else
     SHA256_CTX ctx;
   	sha256_init(&ctx);
   	sha256_update(&ctx, message, message_len);
 	  sha256_final(&ctx, digest);
   #endif
+    uint64_t* ptr2 = digest;
+    //printf("DIGEST: %lx %lx %lx %lx\n", *ptr2, *(ptr2+1), *(ptr2+2), *(ptr2+3));
 }
 void init_fuse(uint8_t *fuse){
 *fuse=0xa9;*(fuse+1)=0xcf;*(fuse+2)=0xe5;*(fuse+3)=0x9d;*(fuse+4)=0x5e;*(fuse+5)=0xde;*(fuse+6)=0xb0;*(fuse+7)=0x42;*(fuse+8)=0xcb;*(fuse+9)=0x91;*(fuse+10)=0x73;*(fuse+11)=0x28;*(fuse+12)=0xca;*(fuse+13)=0x70;*(fuse+14)=0xa7;*(fuse+15)=0x24;*(fuse+16)=0xc6;*(fuse+17)=0x23;*(fuse+18)=0x95;*(fuse+19)=0x8f;*(fuse+20)=0xde;*(fuse+21)=0xc2;*(fuse+22)=0xf5;*(fuse+23)=0xaf;*(fuse+24)=0x40;*(fuse+25)=0x71;*(fuse+26)=0xcd;*(fuse+27)=0xd1;*(fuse+28)=0xa9;*(fuse+29)=0x4f;*(fuse+30)=0xc5;*(fuse+31)=0x33;
@@ -55,16 +64,19 @@ int verify_srk(uint8_t *table)
             #ifdef DEBUG
                 //printf("%x %x %d:%x %x %x\n",*table,*temp,i,table,temp,mlen);
             #endif
-            printf("SHA VERIF SRK %x %x\n", temp, digest);
-            digest_message(temp,mlen,digest);
+            //printf("SHA VERIF SRK %x %x\n", temp, digest);
+            digest_message(temp,mlen,digest,0);
             memcpy(intermediate_hash+len,digest,32);
             len+=32;
             temp=temp+mlen;
-            printf("SHA VERIF1 SRK %x %x\n", temp, cond);
+            //printf("SHA VERIF1 SRK %x %x\n", temp, cond);
             i+=1;
         }
-        printf("SHA VERIF SRK 2 %x %x\n", intermediate_hash, digest);
-        digest_message(intermediate_hash,len,digest);
+        //printf("SHA VERIF SRK 2 %x %x\n", intermediate_hash, digest);
+        //for(int i=0; i<len; i++){
+        //    printf("%02x", intermediate_hash[i]);
+        //}
+        digest_message(intermediate_hash,len,digest, 0);
         if (strncmp(digest,fuse,32)==0){
             #ifdef DEBUG
                 printf("SRK Verif Success.\n");
@@ -132,13 +144,6 @@ int RSAsignVerify(uint8_t *hash,int hash_len,uint8_t *sign,int sig_len,int verif
     long int *xxad = 0x80010000;
     *xxad = t1;
     #ifdef RSADRIVER
-      //uint8_t r1[1000], r2[1000], r3[1000], r4[1000];
-      //BN_bn2bin(&(source_key->d),r2);
-      //BN_bn2bin(&(source_key->n),r3);
-      //BN_bn2bin(&(source_key->rr),r4);
-      //rsa2048_decrypt(r1, r2, r3, r4, &val, 32, 32);
-      //rsa2048_decrypt(r1, &(source_key->d), &(source_key->n), &(source_key->rr), &val, 32, 32);
-      //rsa2048_decrypt(&sig, &(source_key->d), &(source_key->n), &(source_key->rr), &val, 32, 32);
       rsa2048_decrypt(&(sig.digits), &(source_key->d.digits), &(source_key->n.digits), &(source_key->rr.digits), &(val.digits), 2048, 2048);
     #else
       rsaDecrypt(&val,&sig,&(source_key->d),&(source_key->n), source_key->rr);
@@ -196,8 +201,8 @@ int verify_certificate(uint8_t *cert,int verif_index)
             #ifdef DEBUG
                 printf("Len: %d\n",sig_len);
             #endif
-            printf("SHA VERIFY CERT %x %x\n", cert, digest);
-            digest_message(cert,cert_len+3,digest);
+            //printf("SHA VERIFY CERT %x %x\n", cert, digest);
+            digest_message(cert,cert_len+3,digest,1);
             return(RSAsignVerify(digest,32,temp+3,sig_len,verif_index));
         }
     }
@@ -255,13 +260,13 @@ int auth_data(uint8_t hash_algo, uint8_t crypto_algo, uint8_t pki_store_index,vo
         uint8_t* data_pointer = mem_addr_start;
         uint8_t* csf_pointer = csf_addr_start;
         uint8_t hash[64],final_hash[32];
-        printf("AUTH DATA SHA %x %x %x %x\n", data_pointer, csf_pointer, hash, final_hash);
+        //printf("AUTH DATA SHA %x %x %x %x\n", data_pointer, csf_pointer, hash, final_hash);
         //uint64_t hash[8],final_hash[4];
-        digest_message(csf_pointer,csf_len,hash);
+        digest_message(csf_pointer,csf_len,hash,0);
         //digest_message(data_pointer,length,(hash+4));
-        digest_message(data_pointer,length,(hash+32));
+        digest_message(data_pointer,length,(hash+32),0);
         //digest_message(hash,8,final_hash);
-        digest_message(hash,64,final_hash);
+        digest_message(hash,64,final_hash,0);
         //result = RSAsignVerify(final_hash,4,(sign+3),EXTRACT_LEN(sign+1),pki_store_index);
         result = RSAsignVerify((uint8_t*)final_hash,32,(sign+3),EXTRACT_LEN(sign+1),pki_store_index);
     }

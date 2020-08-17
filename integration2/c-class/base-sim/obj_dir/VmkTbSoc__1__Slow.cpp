@@ -9911,15 +9911,6 @@ void VmkTbSoc::_settle__TOP__34(VmkTbSoc__Syms* __restrict vlSymsp) {
     vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aes_capture_read_request 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_addr__DOT__empty_reg) 
            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aes_s_xactor_f_rd_data__DOT__full_reg));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr_DEQ 
-        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr__DOT__empty_reg) 
-           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ 
-        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr__DOT__empty_reg) 
-           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request 
-        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__empty_reg) 
-           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg));
     vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_14_f_wr_addr_DEQ 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_14_f_wr_addr__DOT__empty_reg) 
            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__signature__DOT__s_xactor_f_wr_addr__DOT__full_reg));
@@ -9943,6 +9934,15 @@ void VmkTbSoc::_settle__TOP__34(VmkTbSoc__Syms* __restrict vlSymsp) {
     vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_8_f_rd_addr_DEQ 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_8_f_rd_addr__DOT__empty_reg) 
            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_rd_addr__DOT__full_reg));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr_DEQ 
+        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr__DOT__empty_reg) 
+           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr_ENQ 
+        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_10_f_rd_addr__DOT__empty_reg) 
+           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__full_reg));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request 
+        = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__empty_reg) 
+           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data__DOT__full_reg));
     vlTOPp->mkTbSoc__DOT__soc__DOT__cclass__DOT__dmem__DOT__dtlb__DOT__tag_vpn___05Fh7143 
         = ((0x7fc0000U | (0x3ffffU & ((IData)(0x3ffffU) 
                                       << (0x1fU & ((IData)(9U) 
@@ -9959,7 +9959,7 @@ void VmkTbSoc::_settle__TOP__34(VmkTbSoc__Syms* __restrict vlSymsp) {
     vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_9_f_wr_addr_DEQ 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__fabric_xactors_to_slaves_9_f_wr_addr__DOT__empty_reg) 
            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__full_reg));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__mask___05Fh1239319 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__mask___05Fh1239346 
         = (((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                            >> 7U))) ? ((1U & (IData)(
                                                      (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
@@ -9970,7 +9970,7 @@ void VmkTbSoc::_settle__TOP__34(VmkTbSoc__Syms* __restrict vlSymsp) {
                                >> 6U))) ? 0xfffULL : 0xffULL)) 
            << (0x38U & ((IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                  >> 0x14U)) << 3U)));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749 
         = ((0U == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                     >> 0x17U)))) ? 0U
             : ((4U == (0x1fU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 

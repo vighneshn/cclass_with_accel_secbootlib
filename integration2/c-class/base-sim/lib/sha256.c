@@ -48,6 +48,9 @@ void sha256_transform(SHA256_CTX *ctx, const BYTE data[])
 		m[i] = (data[j] << 24) | (data[j + 1] << 16) | (data[j + 2] << 8) | (data[j + 3]);
 	for ( ; i < 64; ++i)
 		m[i] = SIG1(m[i - 2]) + m[i - 7] + SIG0(m[i - 15]) + m[i - 16];
+  //for(int j = 0; j<=63;j++)
+  //  printf("%x ", ctx->data[j]);
+  //printf("\n");
 
 	a = ctx->state[0];
 	b = ctx->state[1];
@@ -99,6 +102,9 @@ void sha256_update(SHA256_CTX *ctx, const BYTE data[], int len)
 {
 	WORD i;
 
+  //for(int j = 0; j<=i-1;j++)
+  //  printf("%x ", ctx->data[j]);
+  //printf("\n");
 	for (i = 0; i < len; ++i) {
 		ctx->data[ctx->datalen] = data[i];
 		ctx->datalen++;
@@ -115,6 +121,11 @@ void sha256_final(SHA256_CTX *ctx, BYTE hash[])
 	WORD i;
 
 	i = ctx->datalen;
+
+  //printf("DATALENGTH SHA %x\n", i);
+  //for(int j = 0; j<=i-1;j++)
+    //printf("%x ", ctx->data[j]);
+  //printf("\n");
 
 	// Pad whatever data is left in the buffer.
 	if (ctx->datalen < 56) {
@@ -140,6 +151,9 @@ void sha256_final(SHA256_CTX *ctx, BYTE hash[])
 	ctx->data[58] = ctx->bitlen >> 40;
 	ctx->data[57] = ctx->bitlen >> 48;
 	ctx->data[56] = ctx->bitlen >> 56;
+  //for(int j = 0; j<=63;j++)
+    //printf("%x ", ctx->data[j]);
+  //printf("\n");
 	sha256_transform(ctx, ctx->data);
 
 	// Since this implementation uses little endian byte ordering and SHA uses big endian,

@@ -8490,6 +8490,11 @@ void VmkTbSoc::_settle__TOP__43(VmkTbSoc__Syms* __restrict vlSymsp) {
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__signature__DOT__CAN_FIRE_RL_configure_registers) 
            & (8U == (0xfU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__signature__DOT__s_xactor_f_wr_addr__DOT__data0_reg 
                                      >> 0x14U)))));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start 
+        = ((((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
+             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_start)) 
+            & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state))) 
+           & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)));
     vlTOPp->mkTbSoc__DOT__soc__DOT__cclass__DOT__dmem__DOT__dtlb__DOT__MUX_v_vpn_tag_0_write_1___05FVAL_1[0U] 
         = (IData)((((QData)((IData)((0x3ffffU & ((IData)(0x3ffffU) 
                                                  << 
@@ -8530,48 +8535,48 @@ void VmkTbSoc::_settle__TOP__43(VmkTbSoc__Syms* __restrict vlSymsp) {
                                >> 9U)) << 2U)) | (0x7fU 
                                                   & (vlTOPp->mkTbSoc__DOT__soc__DOT__cclass__DOT__dmem__DOT__dtlb__DOT__tag_vpn___05Fh7143 
                                                      >> 0x19U)));
-    if ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))) {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240786 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+    if ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))) {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240813 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? 0U : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cndtr_2));
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240544 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240571 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cpar_2);
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240716 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240743 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cmar_2);
     } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240786 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240813 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cndtr_1)
                 : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cndtr_0));
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240544 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240571 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cpar_1
                 : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cpar_0);
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240716 
-            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1240743 
+            = ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cmar_1
                 : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cmar_0);
     }
-    vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_currentReadRs_0_port0___05Fread___05F3_ETC___05F_d73052 
-        = (((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
-             ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+    vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_currentReadRs_0_port0___05Fread___05F3_ETC___05F_d73054 
+        = (((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
+             ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                  ? 0U : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentReadRs_2))
-             : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+             : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                  ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentReadRs_1)
                  : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentReadRs_0))) 
-           == ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
-                ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+           == ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
+                ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                     ? 0U : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentWriteRs_2))
-                : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+                : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                     ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentWriteRs_1)
                     : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_currentWriteRs_0))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_dma_ccr_0_read___05F2745_dma_dma_d_ETC___05F_d72977 
-        = ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
-            ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+    vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_dma_ccr_0_read___05F2747_dma_dma_d_ETC___05F_d72979 
+        = ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
+            ? ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? 0U : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_2)
-            : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241722))
+            : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1241749))
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_1
                 : vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_0));
     vlTOPp->mkTbSoc__DOT__soc__DOT__cclass__DOT__imem__DOT__itlb__DOT___unnamed___DOT__MUX_v_vpn_tag_0_write_1___05FVAL_1[0U] 

@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 #ifdef DEBUG
 #endif
     uint8_t *temp = csf;    
-    printf("temp: %x *temp: %x\n",temp,*temp);
+    //printf("temp: %x *temp: %x\n",temp,*temp);
     if (*(temp++) != 0x0F)
     {
 #ifdef DEBUG
@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
     int status = 0;
     while( csf + csf_len > temp)
     {
-        printf("%d %x\n ",i,temp);
-        printf("csf:%d csf_len:%d\n ", csf, csf_len);
+        //printf("%d %x\n ",i,temp);
+        //printf("csf:%d csf_len:%d\n ", csf, csf_len);
         i++;
 #ifdef DEBUG
 #endif
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
             temp++;
             temp++;
             int offset = (*(temp+4)<<24)+(*(temp+5)<<16)+(*(temp+6)<<8)+*(temp+7);
-            printf("SHA OFFSET %x %x\n",csf, offset);
+            //printf("SHA OFFSET %x %x\n",csf, offset);
             status = install_key(*temp,*(temp+1),*(temp+2),*(temp+3),csf+offset);
             temp=temp+8;
 #ifdef DEBUG
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
                 unsigned char *data_offset = (unsigned char *)((unsigned int)0+(*(temp+3)<<24)+(*(temp+4)<<16)+(*(temp+5)<<8)+*(temp+6));
                 uint64_t sign_offset = (*(temp+11)<<24)+(*(temp+12)<<16)+(*(temp+13)<<8)+*(temp+14);
                 int data_len =  (*(temp+7)<<24)+(*(temp+8)<<16)+(*(temp+9)<<8)+*(temp+10);
-                printf("AUTHDATA verif %x, %x, %x,%x, %x, %x, %x, %x, %x", *(temp), *(temp+1), *(temp+2), data_offset, data_len, csf, csf_len, csf+sign_offset, sign_offset);
+                //printf("AUTHDATA verif %x, %x, %x,%x, %x, %x, %x, %x, %x", *(temp), *(temp+1), *(temp+2), data_offset, data_len, csf, csf_len, csf+sign_offset, sign_offset);
                 status = auth_data(*(temp),*(temp+1),*(temp+2),data_offset,data_len,csf,csf_len,csf+sign_offset);
                 //status = auth_data(*(temp),*(temp+1),*(temp+2),data,data_len,csf+sign_offset);
                 //status = 1;

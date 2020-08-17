@@ -16,7 +16,7 @@ rom:
 	@mkdir -p output/
 	$(RISCV_GCC) -I./common -DCONFIG_RISCV64=True ${debug} -DCSF_ADDRESS=0x800018c0 -DPK_STORE_ADDR=0x80008008 \
 				-D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math -g\
-				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static -DRSADRIVER\
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static -DRSADRIVER -DSHADRIVER\
 				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/rom.riscv ./rom.c \
 				 ./sha256.c ./crypto/RSA/bignum.c ./crypto/RSA/rsa.c ./common/syscalls.c ./common/rom_crt.S
 	@$(RISCV_OBJDUMP) --source $(OUTDIR)/rom.riscv > $(OUTDIR)/rom.dump

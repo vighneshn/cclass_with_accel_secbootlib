@@ -13279,32 +13279,16 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__7(VmkTbSoc__Syms* __restrict vlSymsp
     }
     if (vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_aesbuf_aes_aes_b_get_aes) {
         vlTOPp->__Vdlyvval__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0[0U] 
-            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[0U];
+            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[0U];
         vlTOPp->__Vdlyvval__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0[1U] 
-            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[1U];
+            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[1U];
         vlTOPp->__Vdlyvval__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0[2U] 
-            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[2U];
+            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[2U];
         vlTOPp->__Vdlyvval__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0[3U] 
-            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168243[3U];
+            = vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1168270[3U];
         vlTOPp->__Vdlyvset__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0 = 1U;
         vlTOPp->__Vdlyvdim0__mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_memory__DOT__RAM__v0 
             = (0x1fU & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_out_rWrPtr));
-    }
-    if (vlTOPp->RST_N) {
-        if (((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
-               & (0x80U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                             >> 0x14U))))) 
-              & (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index))) 
-             | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_getOutput))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready 
-                = (1U & (~ (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
-                             & (0x80U == (0xffU & (IData)(
-                                                          (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                                           >> 0x14U))))) 
-                            & (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index)))));
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready = 0U;
     }
     if (vlTOPp->RST_N) {
         if (((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aes_capture_read_request) 
@@ -13360,6 +13344,24 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__7(VmkTbSoc__Syms* __restrict vlSymsp
             vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_mmeMod_mod_m_rg_M[__Vilp] = 0U;
             __Vilp = ((IData)(1U) + __Vilp);
         }
+    }
+    if (vlTOPp->RST_N) {
+        if ((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
+                & (0x80U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                              >> 0x14U))))) 
+               & (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index))) 
+              | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start)) 
+             | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_getOutput))) {
+            vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready 
+                = (1U & ((~ (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request) 
+                              & (0x80U == (0xffU & (IData)(
+                                                           (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                                            >> 0x14U))))) 
+                             & (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_output_index)))) 
+                         & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))));
+        }
+    } else {
+        vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready = 0U;
     }
     if (vlTOPp->RST_N) {
         if ((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_rsa_capture_read_request) 
@@ -14297,20 +14299,5 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__7(VmkTbSoc__Syms* __restrict vlSymsp
         }
     } else {
         vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_vec_rsq_18 = 0ULL;
-    }
-    if (vlTOPp->RST_N) {
-        if ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_rsa_capture_write_request) 
-              & (0x11U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_rsq_index))) 
-             & (0x60U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_s_xactor_f_wr_addr__DOT__data0_reg 
-                                           >> 0x14U)))))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_vec_rsq_17 
-                = (((QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_s_xactor_f_wr_data__DOT__data0_reg[2U])) 
-                    << 0x33U) | (((QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_s_xactor_f_wr_data__DOT__data0_reg[1U])) 
-                                  << 0x13U) | ((QData)((IData)(
-                                                               vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_s_xactor_f_wr_data__DOT__data0_reg[0U])) 
-                                               >> 0xdU)));
-        }
-    } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__rsa_user_ifc_vec_rsq_17 = 0ULL;
     }
 }

@@ -33,7 +33,6 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     WData/*255:0*/ __Vtemp4119[8];
     WData/*255:0*/ __Vtemp4120[8];
     WData/*95:0*/ __Vtemp4121[3];
-    WData/*95:0*/ __Vtemp4122[3];
     WData/*95:0*/ __Vtemp4139[3];
     WData/*95:0*/ __Vtemp4143[3];
     WData/*95:0*/ __Vtemp4144[3];
@@ -331,9 +330,9 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                    | (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes))) 
                   | (4U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes)))) 
               & (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_saved) 
-                  & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0775_BITS_127_TO___05FETC___05F_d70863) 
+                  & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0777_BITS_127_TO___05FETC___05F_d70865) 
                      | (0U != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_aeskeylen)))) 
-                 & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0775_BITS_191_TO___05FETC___05F_d70896))));
+                 & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0777_BITS_191_TO___05FETC___05F_d70898))));
     vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_key_done_0_write_1___05FSEL_2 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_aesbuf_aes_aes_b_send_bram) 
            & ((((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes)) 
@@ -341,9 +340,9 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                | (((2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes)) 
                    | (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes))) 
                   | (4U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes)))) 
-              & ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0775_BITS_127_TO___05FETC___05F_d70863) 
+              & ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0777_BITS_127_TO___05FETC___05F_d70865) 
                    | (0U != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_aeskeylen))) 
-                  & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0775_BITS_191_TO___05FETC___05F_d70896)) 
+                  & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_key_aes_0777_BITS_191_TO___05FETC___05F_d70898)) 
                  | (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_saved)))));
     vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state_EN 
         = (((((((2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
@@ -360,7 +359,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                 & ((((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length)) 
                      | (1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length))) 
                     | (2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length))) 
-                   | (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209))))) 
+                   | (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211))))) 
             | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
                & (((((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_)) 
                      | (1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_))) 
@@ -427,48 +426,48 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                 : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fdr_last_round_write_1___05FSEL_1)
                     ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fdr_sbox_out_write_1___05FVAL_3)
                     : (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_block_start) 
-                        & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8331_AND_NO_ETC___05F_d68632) 
-                           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8331_83_ETC___05F_d68639)))
+                        & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt___05F8333_AND_NO_ETC___05F_d68634) 
+                           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_blockaes_decrypt___05F8333_83_ETC___05F_d68641)))
                         ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_decrypt_)
                             ? (((2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_)) 
                                 | (3U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_)))
-                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1129311)
-                                : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1139547))
+                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1129338)
+                                : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1139574))
                             : ((4U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_))
-                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1139547)
+                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1139574)
                                 : ((2U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_))
-                                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1129311)
+                                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1129338)
                                     : ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_mode_))
-                                        ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1124181)
-                                        : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1144806)))))
+                                        ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1124208)
+                                        : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1144833)))))
                         : (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_aesbuf_aes_aes_b_send_bram) 
-                            & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_decrypt_aes_0772_AND_NOT_aesb_ETC___05F_d71005) 
-                               | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_decrypt_aes_0772_0999_AND_ETC___05F_d71011)))
+                            & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_decrypt_aes_0774_AND_NOT_aesb_ETC___05F_d71007) 
+                               | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__NOT_aesbuf_aes_aes_b_decrypt_aes_0774_1001_AND_ETC___05F_d71013)))
                             ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_decrypt_aes)
-                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1182619)
+                                ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1182646)
                                 : ((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes))
-                                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1172334)
+                                    ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1172361)
                                     : ((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_mode_aes))
-                                        ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1177493)
-                                        : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1182619))))
+                                        ? (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1177520)
+                                        : (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1182646))))
                             : 0U)))));
     vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_ctr_op_D_IN 
         = (1U & ((~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_ctr_op_write_1___05FSEL_1)) 
                  & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_ctr_op))));
     if (vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_inp_pwEnqueue_whas) {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[0U] 
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[0U] 
             = (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_inp);
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[1U] 
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[1U] 
             = (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_inp 
                        >> 0x20U));
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[2U] 
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[2U] 
             = (IData)((((QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[2U])) 
                         << 0x33U) | (((QData)((IData)(
                                                       vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[1U])) 
                                       << 0x13U) | ((QData)((IData)(
                                                                    vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[0U])) 
                                                    >> 0xdU))));
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[3U] 
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[3U] 
             = (IData)(((((QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[2U])) 
                          << 0x33U) | (((QData)((IData)(
                                                        vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[1U])) 
@@ -477,10 +476,10 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                        vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_s_xactor_f_wr_data__DOT__data0_reg[0U])) 
                                        >> 0xdU))) >> 0x20U));
     } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[0U] = 0U;
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[1U] = 0U;
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[2U] = 0U;
-        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167353[3U] = 0U;
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[0U] = 0U;
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[1U] = 0U;
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[2U] = 0U;
+        vlTOPp->mkTbSoc__DOT__soc__DOT__x3___05Fh1167380[3U] = 0U;
     }
     if (vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_state_var_write_1___05FSEL_1) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_bram_inp_rRdPtr_D_IN = 0U;
@@ -1673,22 +1672,30 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                                             __Vtemp4120[0U])))
                                                           : 
                                                          (((QData)((IData)(
-                                                                           (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                           ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                              & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                              << 0x18U) 
-                                                                            | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                            | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x10U) 
-                                                                               | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                               | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))) 
+                                                                                | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))) 
                                                            << 0x20U) 
                                                           | (QData)((IData)(
-                                                                            (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                            ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                               & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                               << 0x18U) 
-                                                                             | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                             | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x10U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready))))))))) 
+                                                                                | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))))))))))) 
                                                 << 5U)) 
                                 | (0xfU & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg))));
     __Vtemp4121[1U] = ((0x1fU & ((IData)(((0x80U == 
@@ -1701,22 +1708,30 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                               | (QData)((IData)(
                                                                 __Vtemp4120[0U])))
                                            : (((QData)((IData)(
-                                                               (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                               ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                  & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                  << 0x18U) 
-                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                     & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                     << 0x10U) 
-                                                                   | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                   | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                        & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                        << 8U) 
-                                                                      | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))) 
+                                                                      | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                         & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))) 
                                                << 0x20U) 
                                               | (QData)((IData)(
-                                                                (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                   & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                   << 0x18U) 
-                                                                 | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                 | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                      & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                      << 0x10U) 
-                                                                    | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                    | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                         & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                         << 8U) 
-                                                                       | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready))))))))) 
+                                                                       | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                          & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))))))))))) 
                                  >> 0x1bU)) | (0xffffffe0U 
                                                & ((IData)(
                                                           (((0x80U 
@@ -1733,77 +1748,83 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                                                __Vtemp4120[0U])))
                                                              : 
                                                             (((QData)((IData)(
-                                                                              (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                              ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x18U) 
-                                                                               | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                               | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x10U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))) 
+                                                                                | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))) 
                                                               << 0x20U) 
                                                              | (QData)((IData)(
-                                                                               (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                               ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x18U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 0x10U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
                                                                                 << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))))) 
+                                                                                | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))))) 
                                                            >> 0x20U)) 
                                                   << 5U)));
-    __Vtemp4122[2U] = ((0xffffffe0U & ((((0x80U == 
-                                          (0xffU & (IData)(
-                                                           (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                                            >> 0x14U)))) 
-                                         | (0xc1U == 
-                                            (0xffU 
-                                             & (IData)(
-                                                       (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                                        >> 0x14U)))))
-                                         ? 0U : 2U) 
-                                       << 5U)) | (0x1fU 
-                                                  & ((IData)(
-                                                             (((0x80U 
-                                                                == 
-                                                                (0xffU 
-                                                                 & (IData)(
-                                                                           (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
-                                                                            >> 0x14U))))
-                                                                ? 
-                                                               (((QData)((IData)(
-                                                                                __Vtemp4120[1U])) 
-                                                                 << 0x20U) 
-                                                                | (QData)((IData)(
-                                                                                __Vtemp4120[0U])))
-                                                                : 
-                                                               (((QData)((IData)(
-                                                                                (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 0x18U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 0x10U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))) 
-                                                                 << 0x20U) 
-                                                                | (QData)((IData)(
-                                                                                (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 0x18U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 0x10U) 
-                                                                                | (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
-                                                                                << 8U) 
-                                                                                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready)))))))) 
-                                                              >> 0x20U)) 
-                                                     >> 0x1bU)));
+    __Vtemp4121[2U] = (0x1fU & ((IData)((((0x80U == 
+                                           (0xffU & (IData)(
+                                                            (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                                             >> 0x14U))))
+                                           ? (((QData)((IData)(
+                                                               __Vtemp4120[1U])) 
+                                               << 0x20U) 
+                                              | (QData)((IData)(
+                                                                __Vtemp4120[0U])))
+                                           : (((QData)((IData)(
+                                                               ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                  & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                 << 0x18U) 
+                                                                | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                     & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                    << 0x10U) 
+                                                                   | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                        & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                       << 8U) 
+                                                                      | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                         & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))) 
+                                               << 0x20U) 
+                                              | (QData)((IData)(
+                                                                ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                   & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                  << 0x18U) 
+                                                                 | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                      & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                     << 0x10U) 
+                                                                    | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                         & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash))) 
+                                                                        << 8U) 
+                                                                       | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready) 
+                                                                          & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_continuePreHash)))))))))) 
+                                         >> 0x20U)) 
+                                >> 0x1bU));
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_D_IN[0U] 
         = __Vtemp4121[0U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_D_IN[1U] 
         = __Vtemp4121[1U];
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_data_D_IN[2U] 
-        = __Vtemp4122[2U];
+        = ((0xffffffe0U & ((((0x80U == (0xffU & (IData)(
+                                                        (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                                         >> 0x14U)))) 
+                             | (0xc1U == (0xffU & (IData)(
+                                                          (vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_rd_addr__DOT__data0_reg 
+                                                           >> 0x14U)))))
+                             ? 0U : 2U) << 5U)) | __Vtemp4121[2U]);
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_8 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_9
@@ -1868,9 +1889,9 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                    | ((6U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fdr_rg_state)) 
                       & (0xfU == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fdr_counter)))) 
                   | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_aes___05Fdone_encoding) 
-                     & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fcounter_7768_EQ_ETC___05F_d67782)))) 
+                     & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fcounter_7770_EQ_ETC___05F_d67784)))) 
                  | ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_aes___05Fdone_encoding_decrypt) 
-                    & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fcounter_7768_EQ_ETC___05F_d67782)))) 
+                    & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fcounter_7770_EQ_ETC___05F_d67784)))) 
                 | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fdr_col_0_write_1___05FSEL_2)) 
                | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fdr_col_0_write_1___05FSEL_3)) 
               | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_aesbuf_aes_aes_b_blockaes_aes___05Fdecrypt_initial_xor)) 
@@ -1880,29 +1901,29 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state_D_IN 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fkg_rci_write_1___05FSEL_1)
             ? (((2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length)) 
-                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d45130)))
+                & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d45132)))
                 ? 4U : 3U) : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fcol0_write_1___05FSEL_1)
                                ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_saved)
-                                   ? ((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_127_TO_96_0_ETC___05F_d70810) 
-                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_95_TO_64_08_ETC___05F_d70812)) 
-                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_63_TO_32_08_ETC___05F_d70815)) 
-                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_31_TO_0_081_ETC___05F_d70818)) 
+                                   ? ((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_127_TO_96_0_ETC___05F_d70812) 
+                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_95_TO_64_08_ETC___05F_d70814)) 
+                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_63_TO_32_08_ETC___05F_d70817)) 
+                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_31_TO_0_081_ETC___05F_d70820)) 
                                          & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_aeskeylen))) 
-                                        | (((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_191_TO_160___05FETC___05F_d70822) 
-                                                & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_159_TO_128___05FETC___05F_d70824)) 
-                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_127_TO_96_0_ETC___05F_d70826)) 
-                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_95_TO_64_08_ETC___05F_d70828)) 
-                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_63_TO_32_08_ETC___05F_d70830)) 
-                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_31_TO_0_081_ETC___05F_d70832)) 
+                                        | (((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_191_TO_160___05FETC___05F_d70824) 
+                                                & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_159_TO_128___05FETC___05F_d70826)) 
+                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_127_TO_96_0_ETC___05F_d70828)) 
+                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_95_TO_64_08_ETC___05F_d70830)) 
+                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_63_TO_32_08_ETC___05F_d70832)) 
+                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_31_TO_0_081_ETC___05F_d70834)) 
                                            & (1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_aeskeylen)))) 
-                                       | (((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_255_TO_224___05FETC___05F_d70836) 
-                                                 & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_223_TO_192___05FETC___05F_d70838)) 
-                                                & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_191_TO_160___05FETC___05F_d70840)) 
-                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_159_TO_128___05FETC___05F_d70842)) 
-                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_127_TO_96_0_ETC___05F_d70844)) 
-                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_95_TO_64_08_ETC___05F_d70846)) 
-                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_63_TO_32_08_ETC___05F_d70848)) 
-                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0775_BITS_31_TO_0_081_ETC___05F_d70850)) 
+                                       | (((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_255_TO_224___05FETC___05F_d70838) 
+                                                 & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_223_TO_192___05FETC___05F_d70840)) 
+                                                & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_191_TO_160___05FETC___05F_d70842)) 
+                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_159_TO_128___05FETC___05F_d70844)) 
+                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_127_TO_96_0_ETC___05F_d70846)) 
+                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_95_TO_64_08_ETC___05F_d70848)) 
+                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_63_TO_32_08_ETC___05F_d70850)) 
+                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_key_aes_0777_BITS_31_TO_0_081_ETC___05F_d70852)) 
                                           & (2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_aeskeylen))))
                                        ? 0U : 1U) : 1U)
                                : (((4U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_rg_state)) 
@@ -1914,8 +1935,8 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                     == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length))) 
                                                 | (2U 
                                                    == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length))) 
-                                               | (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209))))
-                                            ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47209)
+                                               | (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211))))
+                                            ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d47211)
                                                 ? (
                                                    ((0U 
                                                      == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length)) 
@@ -1923,35 +1944,35 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                        == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_length)))
                                                     ? 2U
                                                     : 
-                                                   ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d45130)
+                                                   ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_round_number_ETC___05F_d45132)
                                                      ? 0U
                                                      : 2U))
                                                 : 0U)
                                             : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__MUX_aesbuf_aes_aes_b_blockaes_aes___05Fcol0_write_1___05FSEL_2)
                                                 ? ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_aes___05Fkg_key_saved)
                                                     ? 
-                                                   ((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_127_T_ETC___05F_d68405) 
-                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_95_TO_ETC___05F_d68407)) 
-                                                         & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_63_TO_ETC___05F_d68410)) 
-                                                        & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_31_TO_ETC___05F_d68413)) 
+                                                   ((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_127_T_ETC___05F_d68407) 
+                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_95_TO_ETC___05F_d68409)) 
+                                                         & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_63_TO_ETC___05F_d68412)) 
+                                                        & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_31_TO_ETC___05F_d68415)) 
                                                        & (0U 
                                                           == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))) 
-                                                      | (((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_191_T_ETC___05F_d68417) 
-                                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_159_T_ETC___05F_d68419)) 
-                                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_127_T_ETC___05F_d68421)) 
-                                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_95_TO_ETC___05F_d68423)) 
-                                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_63_TO_ETC___05F_d68425)) 
-                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_31_TO_ETC___05F_d68427)) 
+                                                      | (((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_191_T_ETC___05F_d68419) 
+                                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_159_T_ETC___05F_d68421)) 
+                                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_127_T_ETC___05F_d68423)) 
+                                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_95_TO_ETC___05F_d68425)) 
+                                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_63_TO_ETC___05F_d68427)) 
+                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_31_TO_ETC___05F_d68429)) 
                                                          & (1U 
                                                             == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len)))) 
-                                                     | (((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_255_T_ETC___05F_d68431) 
-                                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_223_T_ETC___05F_d68433)) 
-                                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_191_T_ETC___05F_d68435)) 
-                                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_159_T_ETC___05F_d68437)) 
-                                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_127_T_ETC___05F_d68439)) 
-                                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_95_TO_ETC___05F_d68441)) 
-                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_63_TO_ETC___05F_d68443)) 
-                                                         & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8396_BITS_31_TO_ETC___05F_d68445)) 
+                                                     | (((((((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_255_T_ETC___05F_d68433) 
+                                                               & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_223_T_ETC___05F_d68435)) 
+                                                              & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_191_T_ETC___05F_d68437)) 
+                                                             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_159_T_ETC___05F_d68439)) 
+                                                            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_127_T_ETC___05F_d68441)) 
+                                                           & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_95_TO_ETC___05F_d68443)) 
+                                                          & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_63_TO_ETC___05F_d68445)) 
+                                                         & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_key___05F8398_BITS_31_TO_ETC___05F_d68447)) 
                                                         & (2U 
                                                            == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__aesbuf_aes_aes_b_blockaes_keyy_len))))
                                                      ? 0U
@@ -3940,7 +3961,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                             >> 0xeU)))))))));
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_9 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_10
@@ -4289,7 +4310,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                    & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__cclass__DOT__riscv__DOT__stage2__DOT__instance_decoder_func_32_2__DOT__instance_address_valid_0__DOT__CASE_address_valid_addr_BITS_11_TO_10_0b0_CASE_ETC___05Fq2))));
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_10 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_11
@@ -4642,7 +4663,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     }
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_11 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_12
@@ -5064,7 +5085,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                                     >> 6U)))))))))));
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_12 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_13
@@ -6035,7 +6056,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                             >> 9U)))));
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_13 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_14
@@ -6043,7 +6064,7 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     }
     if ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
           & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) {
+         | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start))) {
         vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_14 
             = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__MUX_i_write_1___05FSEL_2)
                 ? vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__w_15
@@ -6140,10 +6161,11 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__CAN_FIRE_RL_routput 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__result_fifo__DOT__full_reg) 
            & (2U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start 
-        = (((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
-            & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_start)) 
-           & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start 
+        = ((((0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
+             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_start)) 
+            & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state))) 
+           & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)));
     if (vlTOPp->RST_N) {
         if (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request) 
              & (0U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_addr__DOT__data0_reg 
@@ -6161,24 +6183,18 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i_EN 
         = (((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
             & (0x3fU != (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
-           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start));
+           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start));
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state_D_IN 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__CAN_FIRE_RL_routput)
             ? 0U : (((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
                      & (0x3fU == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i)))
-                     ? 2U : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start)
+                     ? 2U : ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start)
                               ? 1U : 0U)));
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state_EN 
         = ((((1U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state)) 
              & (0x3fU == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__i))) 
             | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__CAN_FIRE_RL_routput)) 
-           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_getOutput 
-        = (((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__result_fifo__DOT__empty_reg) 
-              & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state))) 
-             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_outp_ready))) 
-            & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_sha_rl_start))) 
-           & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)));
+           | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_start));
     vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request 
         = (((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_addr__DOT__empty_reg) 
             & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_data__DOT__empty_reg)) 
@@ -6613,6 +6629,12 @@ VL_INLINE_OPT void VmkTbSoc::_sequent__TOP__26(VmkTbSoc__Syms* __restrict vlSyms
                                                     : 
                                                    vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_input_text[0xfU]))))));
     }
+    vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_getOutput 
+        = (((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__result_fifo__DOT__empty_reg) 
+              & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state))) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_start))) 
+            & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request))) 
+           & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)));
     vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_resp_D_IN 
         = (((((0U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_addr__DOT__data0_reg 
                                        >> 0x14U)))) 

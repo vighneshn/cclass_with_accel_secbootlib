@@ -9,99 +9,6 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VmkTbSoc::_settle__TOP__45\n"); );
     VmkTbSoc* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->mkTbSoc__DOT__soc__DOT___dfoo4322 = (1U 
-                                                 & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16273)
-                                                     ? 
-                                                    (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                     >> 0x12U)
-                                                     : 
-                                                    ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16324)
-                                                      ? 
-                                                     (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                      >> 0x13U)
-                                                      : 
-                                                     ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16375)
-                                                       ? 
-                                                      (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                       >> 0x14U)
-                                                       : 
-                                                      ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_EQ_14_ETC___05F_d16413)
-                                                        ? 
-                                                       (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                        >> 0xdU)
-                                                        : 
-                                                       ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16438)
-                                                         ? 
-                                                        (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                         >> 0xeU)
-                                                         : 
-                                                        ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16463)
-                                                          ? 
-                                                         (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                          >> 0xfU)
-                                                          : 
-                                                         ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16488)
-                                                           ? 
-                                                          (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                           >> 0x10U)
-                                                           : 
-                                                          ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16513)
-                                                            ? 
-                                                           (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                            >> 0x11U)
-                                                            : 
-                                                           ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16538)
-                                                             ? 
-                                                            (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                             >> 0x12U)
-                                                             : 
-                                                            ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16563)
-                                                              ? 
-                                                             (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                              >> 0x13U)
-                                                              : 
-                                                             ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16588)
-                                                               ? 
-                                                              (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                               >> 0x14U)
-                                                               : 
-                                                              ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16629)
-                                                                ? 
-                                                               (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                >> 0x15U)
-                                                                : 
-                                                               ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16680)
-                                                                 ? 
-                                                                (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                 >> 0x16U)
-                                                                 : 
-                                                                ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16731)
-                                                                  ? 
-                                                                 (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                  >> 0x17U)
-                                                                  : 
-                                                                 ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16782)
-                                                                   ? 
-                                                                  (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                   >> 0x18U)
-                                                                   : 
-                                                                  ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16833)
-                                                                    ? 
-                                                                   (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                    >> 0x19U)
-                                                                    : 
-                                                                   ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16884)
-                                                                     ? 
-                                                                    (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                     >> 0x1aU)
-                                                                     : 
-                                                                    ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16935)
-                                                                      ? 
-                                                                     (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                      >> 0x1bU)
-                                                                      : 
-                                                                     (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
-                                                                      >> 0x1cU))))))))))))))))))));
     vlTOPp->mkTbSoc__DOT__soc__DOT___dfoo4571 = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_EQ_14_ETC___05F_d16018) 
                                                  | ((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16069) 
                                                       | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__plic_rg_wrpacket_5927_BITS_24_TO_20_5982_PLUS___05FETC___05F_d16120)) 
@@ -5516,7 +5423,7 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
                                                            : 
                                                           (vlTOPp->mkTbSoc__DOT__soc__DOT__plic_s_xactor_f_wr_data__DOT__data0_reg[0U] 
                                                            >> 0x1cU)))))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__IF_dma_dma_wr_read_addr_wget___05F2854_BITS_7_TO_3_ETC___05F_d72934 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__IF_dma_dma_wr_read_addr_wget___05F2856_BITS_7_TO_3_ETC___05F_d72936 
         = ((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
                           >> 0x1bU))) ? ((1U & (IData)(
                                                        (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
@@ -5534,14 +5441,14 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
                                                              (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
                                                               >> 0x17U)))
                                                    ? 0ULL
-                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237908)))
+                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237935)))
                                                   : 
                                                  ((1U 
                                                    & (IData)(
                                                              (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
                                                               >> 0x17U)))
-                                                   ? (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237863))
-                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237816))))
+                                                   ? (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237890))
+                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237843))))
                                               : 0ULL)
                                           : 0ULL) : 
            ((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
@@ -5590,7 +5497,7 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
                      : ((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_rd_addr__DOT__data0_reg 
                                        >> 0x17U))) ? (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_cndtr_0))
                          : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma_ccr_0)))))));
-    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1239577 
+    vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1239604 
         = ((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                           >> 0x1bU))) ? ((1U & (IData)(
                                                        (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
@@ -5608,14 +5515,14 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
                                                              (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                                               >> 0x17U)))
                                                    ? 0ULL
-                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237908)))
+                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237935)))
                                                   : 
                                                  ((1U 
                                                    & (IData)(
                                                              (vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
                                                               >> 0x17U)))
-                                                   ? (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237863))
-                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237816))))
+                                                   ? (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237890))
+                                                   : (QData)((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__x___05Fh1237843))))
                                               : 0ULL)
                                           : 0ULL) : 
            ((1U & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__dma_s_xactor_f_wr_addr__DOT__data0_reg 
@@ -5736,12 +5643,12 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
     }
     if ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_2))) {
         if ((1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_dma1_cselr_2))) {
-            vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_wr_peripheral_interrupt_whas___05F_ETC___05F_d73157 
+            vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_wr_peripheral_interrupt_whas___05F_ETC___05F_d73159 
                 = (1U & ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_wr_peripheral_interrupt_wget) 
                          >> 1U));
         }
     } else {
-        vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_wr_peripheral_interrupt_whas___05F_ETC___05F_d73157 
+        vlTOPp->mkTbSoc__DOT__soc__DOT__SEL_ARR_dma_dma_wr_peripheral_interrupt_whas___05F_ETC___05F_d73159 
             = (1U & (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__dma_dma_wr_peripheral_interrupt_wget));
     }
     vlTOPp->mkTbSoc__DOT__soc__DOT___theResult___05F___05F_2_fst___05Fh805700 
@@ -6352,6 +6259,12 @@ void VmkTbSoc::_settle__TOP__45(VmkTbSoc__Syms* __restrict vlSymsp) {
             & (0U == (0xffU & (IData)((vlTOPp->mkTbSoc__DOT__soc__DOT__sha_s_xactor_f_wr_addr__DOT__data0_reg 
                                        >> 0x14U))))) 
            & (7U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_input_index)));
+    vlTOPp->mkTbSoc__DOT__soc__DOT__WILL_FIRE_RL_sha_sha_rl_getOutput 
+        = (((((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__result_fifo__DOT__empty_reg) 
+              & (0U == (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_sha__DOT__state))) 
+             & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__sha_sha_rg_start))) 
+            & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_write_request))) 
+           & (~ (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_sha_capture_read_request)));
     vlTOPp->mkTbSoc__DOT__soc__DOT__uart_s_xactor_f_wr_data_DEQ 
         = ((IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_uart_burst_writes) 
            | (IData)(vlTOPp->mkTbSoc__DOT__soc__DOT__CAN_FIRE_RL_uart_capture_write_request));
